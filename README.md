@@ -1,49 +1,45 @@
-# Solmar City — make.fun gta6-01 entry
-
 [![make.fun](https://make.fun/badge/gta6-01.svg)](https://make.fun/bounty/gta6-01)
 [![rank](https://make.fun/badge/gta6-01/Keso1234/makefun-gta6-01/rank.svg)](https://make.fun/bounty/gta6-01)
 [![reward](https://make.fun/badge/gta6-01/Keso1234/makefun-gta6-01/reward.svg)](https://make.fun/bounty/gta6-01)
 
-An entry for the [make.fun](https://make.fun) bounty
-[gta6-01](https://make.fun/bounty/gta6-01): make GTA 6 — the most
-complete open-world crime game possible, playable in a desktop browser
-from static files, no network request.
+# Solmar City
 
-## What it is
+Solmar City is an original 2D top-down open-world crime game built in vanilla JavaScript. It runs entirely from static files in a desktop browser, with no network requests.
 
-**Solmar City** — an original 2D top-down open-world crime game in
-vanilla JavaScript (no libraries, no network). You play Kai Marlow, a
-driver new to a sun-soaked coastal city. All city, characters,
-vehicles, names, story, art, sound and music are original — nothing
-from Rockstar Games.
+You play Kai Marlow, a driver new to a sun-soaked coastal city. Explore the streets on foot or behind the wheel, take on jobs, dodge the law, and build your reputation one score at a time.
 
-- **On foot and by car:** walk/run (WASD), jack parked or traffic cars
-  (E), drive with accel/brake/steering and handbrake.
-- **Traffic and pedestrians:** civilian cars drive the road grid,
-  brake and honk; pedestrians walk sidewalks and flee when scared.
-- **Wanted 1–5 stars:** crimes raise heat; police cars pursue, ram
-  and box in; foot cops chase and bust; respray at Lena's Garage.
-- **5 story missions** with briefings, dialogue, waypoints and cash
-  rewards, plus a repeatable taxi side job.
-- **Combat:** mouse aim, pistol + SMG pickup, enemies that shoot back.
-- **HUD + minimap:** health/armor, cash, clock, wanted stars,
-  speedometer, objective tracker, live circular minimap.
-- **Start screen, pause menu, save/load** (localStorage), WebAudio
-  synthesized sound and music.
+## How to play
 
-## How to run
+Run the server, then open the game in desktop Chrome:
 
-```sh
+```bash
 node serve.ts --port 8080
 ```
 
-Then open `http://localhost:8080` in desktop Chrome. Keyboard + mouse.
-Screenshot stagings: `?shot=chase|street|drive|start|port&seed=1337`.
+Then visit http://localhost:8080
 
-`main.ts` (Node 22) is the entrypoint: it copies `game/` and
-`screenshots/` to `/output` and writes `dossier.json` with the vendored
-make.fun library (`vendor/makefun-game.ts`).
+## Controls
+
+- **WASD** — Walk, run, and drive
+- **E** — Jack a nearby car
+- **Mouse** — Aim and shoot
+
+## Features
+
+- Open city to explore on foot and by car, with civilian traffic and pedestrians
+- Wanted system from 1 to 5 stars, with police pursuit that escalates as your heat rises
+- 5 story missions with briefings, dialogue, waypoints, and cash rewards
+- Repeatable taxi side job for extra cash between missions
+- Combat with mouse aim, starting with a pistol and an SMG pickup to find
+- HUD and live minimap to track your position, objectives, and wanted level
+- Start screen and pause menu
+- Save and load progress via localStorage
+- Synthesized sound effects and music using WebAudio — no audio files needed
+
+## Build
+
+`main.ts` (Node 22) is the entrypoint. It copies `game/` and `screenshots/` to `/output` and writes `dossier.json`.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT, see LICENSE.
